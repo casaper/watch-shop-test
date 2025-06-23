@@ -1,0 +1,6 @@
+<div *ngIf="product()?.title">
+  <p>sku: {{ product()?.sku }}</p>
+  <p>Category: {{ product()?.category }}</p>
+  <p>Title: {{ product()?.title }}</p>
+  <p>Price: {{ product()?.price?.priceFormatted }}</p>
+</div>
