@@ -35,6 +35,10 @@ html {
   font-family: 'Trade Gothic LT', sans-serif;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 .sr-only {
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%);
