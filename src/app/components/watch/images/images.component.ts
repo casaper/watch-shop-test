@@ -7,7 +7,7 @@ import { ProductWithPrice } from '../../../models/product.type';
   imports: [CommonModule],
   templateUrl: './images.component.html',
   styleUrl: './images.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ImagesComponent implements OnInit {
   galleryMedia = input.required<ProductWithPrice['medias']>();

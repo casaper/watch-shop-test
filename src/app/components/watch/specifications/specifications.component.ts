@@ -7,7 +7,7 @@ import { ProductWithPrice } from '../../../models/product.type';
   imports: [CommonModule],
   templateUrl: './specifications.component.html',
   styleUrl: './specifications.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SpecificationsComponent {
   specifications = input.required<ProductWithPrice['productSpecifications']>();

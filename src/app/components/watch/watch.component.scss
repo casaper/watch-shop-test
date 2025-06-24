@@ -1,3 +1,81 @@
-.lead-wrap {
+.lead {
   background: #f0f0f0;
+  margin: 0 0.5rem;
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+
+  &-images {
+    flex: 0 0 40rem;
+    max-width: 40%;
+  }
+
+  &-inner {
+    flex: 0 0 40rem;
+    max-width: 40%;
+
+    display: flex;
+    align-items: center;
+  }
+
+  &-box {
+  }
+
+  &-shift {
+    padding-left: 3rem;
+  }
+}
+
+.category {
+  color: #caa25c;
+  font:
+    normal 0.85rem/1.1 'Trade Gothic LT',
+    sans-serif;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  font:
+    2.5rem/1.2 'Minion Pro',
+    serif;
+  margin: 1.25rem 0;
+  padding-right: 50%;
+}
+
+.price {
+  color: #caa25c;
+  font:
+    1.5rem/1.1 'Minion Pro',
+    serif;
+  margin: 0 0 1rem 0;
+}
+
+.type-sku {
+  font:
+    normal 0.65rem/2 'Trade Gothic LT',
+    sans-serif;
+  color: #8c8c8c;
+  margin: 0 0 0.5rem 0;
+}
+
+.short-description {
+  font:
+    1.2rem/1.5 'Minion Pro',
+    serif;
+  color: #8c8c8c;
+  margin: 0 0 2rem 0;
+  padding-right: 30%;
+}
+
+.add-to-cart {
+  font:
+    bold 1rem/1 'Trade Gothic LT',
+    sans-serif;
+  border: none;
+  background-color: #caa25c;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  text-transform: uppercase;
 }

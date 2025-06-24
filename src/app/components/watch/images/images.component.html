@@ -1,12 +1,17 @@
 <section class="images">
   <ul class="selector">
-    <li *ngFor="let image of galleryMedia(); let i = index" class="selector-item">
+    <li
+      *ngFor="let image of galleryMedia(); let i = index"
+      class="selector-item"
+      [ngClass]="{ selected: selected()?.path === image.path }"
+    >
       <button (click)="selectImage(image)" (keyup.space)="selectImage(image)">
         <img src="assets/images/img/thumb_{{ image.path }}" alt="Gallery item {{ i + 1 }}" />
+        <div class="sr-only">Show image {{ i + 1 }} of {{ galleryMedia().length }}</div>
       </button>
     </li>
   </ul>
-  <div class="selected-image">
+  <div class="image-display">
     <img
       [src]="'assets/images/img/' + selected()?.path || galleryMedia().at(0)?.path"
       alt="Selected gallery image"

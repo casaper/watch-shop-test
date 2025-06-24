@@ -1,14 +1,21 @@
 <article class="details">
   <div class="section-name">Product Details</div>
-  <h3>{{ details().title }}</h3>
+  <h3 class="section-title">{{ details().title }}</h3>
   <ul class="detail-list">
-    <li *ngFor="let detail of details().data">
-      <img src="assets/images/icons/{{ mediaMap()[detail.iconTarget] }}" alt="Icon {{ detail.text }}" />
-      <div class="detail-name">{{ detail.title }}</div>
-      <div class="detail-value">{{ detail.text }}</div>
+    <li *ngFor="let detail of details().data" class="detail-list-item">
+      <div class="detail-list-icon">
+        <img
+          src="assets/images/icons/{{ mediaMap()[detail.iconTarget] }}"
+          alt="Icon {{ detail.text }}"
+        />
+      </div>
+      <div class="detail-list-text">
+        <div class="detail-list-name">{{ detail.title }}</div>
+        <div class="detail-list-value">{{ detail.text }}</div>
+      </div>
     </li>
   </ul>
   <div class="detail-image">
-    <img src="assets/images/img/{{ mediaMap()['detail-1'] }}" alt="Product detail" >
+    <img src="assets/images/img/{{ mediaMap()['detail-1'] }}" alt="Product detail" />
   </div>
 </article>

@@ -7,7 +7,7 @@ import { ProductWithPrice } from '../../../models/product.type';
   imports: [CommonModule],
   templateUrl: './details.component.html',
   styleUrl: './details.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DetailsComponent {
   mediaMap = input.required<Record<string, string>>();

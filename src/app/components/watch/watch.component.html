@@ -1,17 +1,22 @@
 <article>
-  <div class="lead-wrap">
-    <div class="lead">
-      <div class="category">{{ product().category }} Watches</div>
-      <h2>{{ product().title }}</h2>
-      <div class="price">
-        {{ product().price?.priceFormatted }}
-      </div>
-      <div class="type-sku">Watch {{ product().sku }}</div>
-      <div class="short-description">
-        {{ product().shortDescription }}
+  <div class="lead">
+    <app-images class="lead-images" [galleryMedia]="galleryMedia()"></app-images>
+    <div class="lead-inner">
+      <div class="lead-box">
+        <div class="category">{{ product().category }} Watches</div>
+        <h2 class="title">{{ product().title }}</h2>
+        <div class="lead-shift">
+          <div class="price">
+            {{ product().price?.priceFormatted }}
+          </div>
+          <div class="type-sku">Watch {{ product().sku }}</div>
+          <div class="short-description">
+            {{ product().shortDescription }}
+          </div>
+          <button class="add-to-cart">Add to shopping bag</button>
+        </div>
       </div>
     </div>
-    <app-images [galleryMedia]="galleryMedia()"></app-images>
   </div>
   <app-details [details]="product().productDetails" [mediaMap]="mediaMap"></app-details>
   <app-specifications
