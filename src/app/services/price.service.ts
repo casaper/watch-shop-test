@@ -8,8 +8,6 @@ import { Observable, from } from 'rxjs';
 })
 export class PriceService {
 
-  constructor() { }
-
   getPrices(active = true): Observable<Price[]> {
     if (active) {
       return from(Promise.resolve(priceData.filter(price => price.isActive)));

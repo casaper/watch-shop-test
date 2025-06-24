@@ -17,7 +17,7 @@ import { Price } from "./price.type";
 // These functions will throw an error if the JSON doesn't
 // match the expected interface, even if the JSON is valid.
 
-export type Product = {
+export interface Product {
   id: string;
   category: string;
   title: string;
@@ -29,25 +29,25 @@ export type Product = {
   productDetails: ProductDetails;
   productSpecifications: ProductDetails;
   relatedProducts: string[];
-};
+}
 
-export type Media = {
+export interface Media {
   targetAttr: string;
   path: string;
   sortOrder: number;
-};
+}
 
-export type ProductDetails = {
+export interface ProductDetails {
   title: string;
   data: Datum[];
-};
+}
 
-export type Datum = {
+export interface Datum {
   title: string;
   text: string;
   iconTarget: string;
   sortOrder: number;
-};
+}
 
 export type ProductWithPrice = Product & {
   price?: Price;
@@ -166,7 +166,7 @@ function transform(
   }
 
   function transformObject(
-    props: { [k: string]: any },
+    props: Record<string, any>,
     additional: any,
     val: any
   ): any {

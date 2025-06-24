@@ -10,8 +10,6 @@ import { Observable, from, firstValueFrom } from 'rxjs';
 export class ProductsService {
   priceService = inject(PriceService);
 
-  constructor() { }
-
   getProducts(active = true, includePrice = false): Observable<ProductWithPrice[]> {
     const products = (active ? productsData.filter(product => product.isActive) : productsData).map(p => this.sortProductMediaAndData(p));
     if (includePrice) {
