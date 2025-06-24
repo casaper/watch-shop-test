@@ -1,6 +1,3 @@
-<div *ngIf="product()?.title">
-  <p>sku: {{ product()?.sku }}</p>
-  <p>Category: {{ product()?.category }}</p>
-  <p>Title: {{ product()?.title }}</p>
-  <p>Price: {{ product()?.price?.priceFormatted }}</p>
-</div>
+<app-watch *ngIf="product()?.title" [product]="product()!"></app-watch>
+
+<p *ngIf="!product()?.title">Loading...</p>

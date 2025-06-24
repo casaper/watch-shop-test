@@ -1,0 +1,14 @@
+<article class="specifications">
+  <div class="section-name">Specifications</div>
+  <h3>{{ specifications().title }}</h3>
+  <ul class="detail-list">
+    <li *ngFor="let detail of specifications().data">
+      <img src="assets/images/icons/{{ mediaMap()[detail.iconTarget] }}" alt="Icon {{ detail.text }}" />
+      <div class="detail-name">{{ detail.title }}</div>
+      <div class="detail-value">{{ detail.text }}</div>
+    </li>
+  </ul>
+  <div class="detail-image">
+    <img src="assets/images/img/{{ mediaMap()['detail-2'] }}" alt="Product specifications" >
+  </div>
+</article>

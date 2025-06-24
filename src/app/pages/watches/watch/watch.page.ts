@@ -3,12 +3,15 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { map, mergeMap } from 'rxjs';
 import { toSignal } from '@angular/core/rxjs-interop';
+
 import { ProductsService } from '../../../services/products.service';
+import { WatchComponent } from '../../../components/watch/watch.component';
 
 @Component({
-  selector: 'app-show-product',
+  selector: 'app-watch-page',
   imports: [
     CommonModule,
+    WatchComponent,
   ],
   templateUrl: './watch.page.html',
   styleUrl: './watch.page.scss',
