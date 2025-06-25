@@ -4,13 +4,15 @@
     <div class="section-name">Specifications</div>
   </div>
   <ul class="detail-list">
-    <li *ngFor="let detail of specifications().data" class="detail-list-item">
-      <div class="detail-list-icon">
-        <img src="/icons/{{ mediaMap()[detail.iconTarget] }}" alt="Icon {{ detail.text }}" />
-      </div>
-      <div class="detail-list-name">{{ detail.title }}</div>
-      <div class="detail-list-value">{{ detail.text }}</div>
-    </li>
+    @for (detail of specifications().data; track detail) {
+      <li class="detail-list-item">
+        <div class="detail-list-icon">
+          <img src="/icons/{{ mediaMap()[detail.iconTarget] }}" alt="Icon {{ detail.text }}" />
+        </div>
+        <div class="detail-list-name">{{ detail.title }}</div>
+        <div class="detail-list-value">{{ detail.text }}</div>
+      </li>
+    }
   </ul>
   <div class="detail-image">
     <img src="/img/{{ mediaMap()['detail-2'] }}" alt="Product specifications" />

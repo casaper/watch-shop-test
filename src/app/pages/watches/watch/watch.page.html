@@ -1,3 +1,7 @@
-<app-watch *ngIf="product()?.title" [product]="product()!"></app-watch>
+@if (product()?.title) {
+  <app-watch [product]="product()!"></app-watch>
+}
 
-<p *ngIf="!product()?.title">Loading...</p>
+@if (!product()?.title) {
+  <p>Loading...</p>
+}

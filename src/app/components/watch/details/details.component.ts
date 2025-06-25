@@ -1,10 +1,10 @@
-import { CommonModule } from '@angular/common';
+
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { ProductWithPrice } from '../../../models/product.type';
 
 @Component({
   selector: 'app-details',
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.scss', '../watch-common.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

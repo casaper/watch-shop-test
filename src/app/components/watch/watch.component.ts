@@ -1,13 +1,13 @@
 import { ChangeDetectionStrategy, Component, effect, input, signal } from '@angular/core';
 import { ProductWithPrice } from '../../models/product.type';
-import { CommonModule } from '@angular/common';
+
 import { DetailsComponent } from './details/details.component';
 import { SpecificationsComponent } from './specifications/specifications.component';
 import { LeadComponent } from './lead/lead.component';
 
 @Component({
   selector: 'app-watch',
-  imports: [CommonModule, SpecificationsComponent, DetailsComponent, LeadComponent],
+  imports: [SpecificationsComponent, DetailsComponent, LeadComponent],
   templateUrl: './watch.component.html',
   styleUrls: ['./watch.component.scss', './watch-common.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

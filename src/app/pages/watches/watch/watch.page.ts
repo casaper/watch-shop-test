@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { map, mergeMap } from 'rxjs';
@@ -9,7 +9,7 @@ import { WatchComponent } from '../../../components/watch/watch.component';
 
 @Component({
   selector: 'app-watch-page',
-  imports: [CommonModule, WatchComponent],
+  imports: [WatchComponent],
   templateUrl: './watch.page.html',
   styleUrl: './watch.page.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
