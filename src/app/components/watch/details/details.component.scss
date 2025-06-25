@@ -1,6 +1,6 @@
 .section {
   &-name {
-    color: #caa25c;
+    color: var(--color-accent);
     font:
       bold 0.9rem/1.1 'Trade Gothic LT',
       sans-serif;

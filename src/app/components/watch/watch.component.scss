@@ -27,7 +27,7 @@
 }
 
 .category {
-  color: #caa25c;
+  color: var(--color-accent);
   font:
     normal 0.85rem/1.1 'Trade Gothic LT',
     sans-serif;
@@ -45,7 +45,7 @@
 }
 
 .price {
-  color: #caa25c;
+  color: var(--color-accent);
   font:
     1.5rem/1.1 'Minion Pro',
     serif;
@@ -74,7 +74,7 @@
     bold 1rem/1 'Trade Gothic LT',
     sans-serif;
   border: none;
-  background-color: #caa25c;
+  background-color: var(--color-accent);
   color: #fff;
   padding: 1rem 1.5rem;
   text-transform: uppercase;
