@@ -26,6 +26,11 @@
             "polyfills": [],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            },
             "assets": [
               {
                 "glob": "**/*",
@@ -38,7 +43,7 @@
               }
             ],
             "styles": [
-              "src/styles/main.scss"
+              "src/styles/global/main.scss"
             ],
             "scripts": []
           },
