@@ -1,7 +1,5 @@
 @if (product()?.title) {
-  <app-watch [product]="product()!"></app-watch>
-}
-
-@if (!product()?.title) {
-  <p>Loading...</p>
+<app-watch [product]="product()!"></app-watch>
+} @if (!product()?.title) {
+<p>Loading...</p>
 }

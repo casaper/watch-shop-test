@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, effect, input, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
 import { ProductWithPrice } from '../../models/product.type';
 
 import { DetailsComponent } from './details/details.component';
@@ -14,17 +14,12 @@ import { LeadComponent } from './lead/lead.component';
 })
 export class WatchComponent {
   product = input.required<ProductWithPrice>();
-  mediaMap: Record<string, string> = {};
-  galleryMedia = signal<ProductWithPrice['medias']>([]);
-
-  constructor() {
-    effect(() => {
-      const media = this.product().medias;
-      const mediaFilenames = media.map((i) => [i.targetAttr, i.path]);
-      this.galleryMedia.set(
-        media.filter((i) => i.targetAttr === 'gallery').sort((a, b) => a.sortOrder - b.sortOrder)
-      );
-      Object.assign(this.mediaMap, Object.fromEntries(mediaFilenames));
-    });
-  }
+  galleryMedia = computed<ProductWithPrice['medias']>(() =>
+    this.product()
+      .medias.filter((i) => i.targetAttr === 'gallery')
+      .sort((a, b) => a.sortOrder - b.sortOrder)
+  );
+  mediaMap = computed<Record<string, string>>(() =>
+    Object.fromEntries(this.product().medias.map((i) => [i.targetAttr, i.path]))
+  );
 }

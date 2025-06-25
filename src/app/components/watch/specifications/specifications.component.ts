@@ -1,4 +1,3 @@
-
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { ProductWithPrice } from '../../../models/product.type';
 
