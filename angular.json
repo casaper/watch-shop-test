@@ -105,7 +105,8 @@
             "lintFilePatterns": [
               "src/**/*.ts",
               "src/**/*.html"
-            ]
+            ],
+            "format": "unix"
           }
         }
       }

@@ -13,12 +13,12 @@
   &-inner {
     flex: 0 0 40rem;
     max-width: 40%;
-
     display: flex;
     align-items: center;
   }
 
   &-box {
+    margin: 0;
   }
 
   &-shift {
@@ -49,7 +49,7 @@
   font:
     1.5rem/1.1 'Minion Pro',
     serif;
-  margin: 0 0 1rem 0;
+  margin: 0 0 1rem;
 }
 
 .type-sku {
@@ -57,7 +57,7 @@
     normal 0.65rem/2 'Trade Gothic LT',
     sans-serif;
   color: #8c8c8c;
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.5rem;
 }
 
 .short-description {
@@ -65,7 +65,7 @@
     1.2rem/1.5 'Minion Pro',
     serif;
   color: #8c8c8c;
-  margin: 0 0 2rem 0;
+  margin: 0 0 2rem;
   padding-right: 30%;
 }
 
