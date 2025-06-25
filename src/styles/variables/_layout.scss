@@ -1,0 +1,19 @@
+// Layout breakpoints
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-de: 1024px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+$breakpoint-xxxl: 1600px;
+$breakpoints: (
+  xs: $breakpoint-xs,
+  sm: $breakpoint-sm,
+  md: $breakpoint-md,
+  lg: $breakpoint-lg,
+  de: $breakpoint-de,
+  xl: $breakpoint-xl,
+  xxl: $breakpoint-xxl,
+  xxxl: $breakpoint-xxxl,
+);

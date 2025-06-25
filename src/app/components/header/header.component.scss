@@ -1,4 +1,4 @@
-@use 'mixins/viewport' as vp;
+@use 'common' as *;
 
 .main-header {
   position: relative;
@@ -9,15 +9,15 @@
   margin: 0 auto;
   max-width: calc(100vw - 1rem);
 
-  @include vp.sm {
+  @include md {
     max-width: calc(48rem - 1rem);
   }
 
-  @include vp.md {
+  @include lg {
     max-width: calc(64rem - 1.5rem);
   }
 
-  @include vp.lg {
+  @include xl {
     max-width: calc(75rem - 1.5rem);
   }
 }
@@ -86,15 +86,15 @@ button {
   position: absolute;
   height: 5rem;
 
-  @include vp.sm {
+  @include md {
     max-width: 8rem;
   }
 
-  @include vp.md {
+  @include lg {
     max-width: 13rem;
   }
 
-  @include vp.lg {
+  @include xl {
     max-width: 18rem;
   }
 

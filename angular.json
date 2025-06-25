@@ -37,6 +37,26 @@
                 "input": "public"
               },
               {
+                "glob": "**/*.{woff2,woff}",
+                "input": "src/assets/fonts",
+                "output": "fonts"
+              },
+              {
+                "glob": "**/*.{png,jpg,svg,gif,webp}",
+                "input": "src/assets/images/img",
+                "output": "img"
+              },
+              {
+                "glob": "**/*.{png,jpg,svg,gif,webp}",
+                "input": "src/assets/images/icons",
+                "output": "icons"
+              },
+              {
+                "glob": "**/*.{png,jpg,svg,gif,webp}",
+                "input": "src/assets/images",
+                "output": "images"
+              },
+              {
                 "glob": "**/*",
                 "input": "src/assets",
                 "output": "assets"

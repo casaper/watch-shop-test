@@ -1,0 +1,10 @@
+@use 'common' as *;
+
+.serif {
+  font-family: $font-serif;
+  font-weight: normal;
+}
+
+.sans {
+  font-family: $font-sans;
+}

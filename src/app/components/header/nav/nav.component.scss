@@ -1,4 +1,4 @@
-@use 'mixins/viewport' as vp;
+@use 'common' as *;
 
 .nav {
   &-list {
@@ -18,15 +18,15 @@
     padding: 0;
 
     &:nth-child(3) {
-      @include vp.sm {
+      @include md {
         margin-right: 10rem;
       }
 
-      @include vp.md {
+      @include lg {
         margin-right: 15rem;
       }
 
-      @include vp.lg {
+      @include xl {
         margin-right: 20rem;
       }
     }
@@ -38,7 +38,10 @@
     padding: 0.5rem 1rem;
     display: block;
     text-transform: uppercase;
-    font: normal 1rem/1 'Minion Pro', serif;
+    font-family: $font-serif;
+    font-size: 0.9rem;
+    line-height: 1;
+    letter-spacing: 0.1rem;
 
     &:first-child {
       padding-left: 0;

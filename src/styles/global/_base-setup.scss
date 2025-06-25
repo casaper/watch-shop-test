@@ -1,0 +1,10 @@
+@use 'common' as *;
+
+html {
+  font-size: 16px;
+  font-family: $font-sans;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}

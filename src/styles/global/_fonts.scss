@@ -1,31 +1,8 @@
-@font-face {
-  font-family: 'Trade Gothic LT';
-  font-style: normal;
-  font-weight: normal;
-  src:  url('../../assets/fonts/Trade-Gothic-LT.woff2') format('woff2'),
-        url('../../assets/fonts/Trade-Gothic-LT.woff') format('woff');
-}
+@use 'common' as *;
 
-@font-face {
-  font-family: 'Trade Gothic LT';
-  font-style: normal;
-  font-weight: light;
-  src:  url('../../assets/fonts/Trade-Gothic-LT-Light.woff2') format('woff2'),
-        url('../../assets/fonts/Trade-Gothic-LT-Light.woff') format('woff');
-}
+$trade-gothic-aliases: ('Trade Gothic LT', 'Trade-Gothic-LT', 'Trade-Gothic', 'trade-gothic', 'tradegothic');
 
-@font-face {
-  font-family: 'Trade Gothic LT';
-  font-style: normal;
-  font-weight: bold;
-  src:  url('../../assets/fonts/Trade-Gothic-LT-Bold.woff2') format('woff2'),
-        url('../../assets/fonts/Trade-Gothic-LT-Bold.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Minion Pro';
-  font-style: normal;
-  font-weight: normal;
-  src:  url('../../assets/fonts/Minion-Pro-Regular.woff2') format('woff2'),
-        url('../../assets/fonts/Minion-Pro-Regular.woff') format('woff');
-}
+@include font-face-aliases($trade-gothic-aliases, (normal, 400, regular), 'Trade-Gothic-LT');
+@include font-face-aliases($trade-gothic-aliases, (light, 300), 'Trade-Gothic-LT-Light');
+@include font-face-aliases($trade-gothic-aliases, (bold, 700), 'Trade-Gothic-LT-Bold');
+@include font-face-aliases(('Minion Pro', 'Minion-Pro', 'minion-pro', 'minionpro'), (normal, 400, regular), 'Minion-Pro-Regular');

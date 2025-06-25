@@ -1,0 +1,7 @@
+@use 'common' as *;
+
+:root {
+  --color-accent: $color-accent;
+  --font-sans: $font-sans;
+  --font-serif: $font-serif;
+}

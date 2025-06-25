@@ -1,3 +1,5 @@
+@use 'common' as *;
+
 .lead {
   background: #f0f0f0;
   margin: 0 0.5rem;
@@ -27,10 +29,8 @@
 }
 
 .category {
-  color: var(--color-accent);
-  font:
-    normal 0.85rem/1.1 'Trade Gothic LT',
-    sans-serif;
+  color: $color-accent;
+  font: normal 0.85rem/1.1 $font-sans;
   text-transform: uppercase;
   margin: 0;
   padding: 0;
@@ -45,36 +45,28 @@
 }
 
 .price {
-  color: var(--color-accent);
-  font:
-    1.5rem/1.1 'Minion Pro',
-    serif;
+  color: $color-accent;
+  font: normal 1.5rem/1.1 $font-serif;
   margin: 0 0 1rem;
 }
 
 .type-sku {
-  font:
-    normal 0.65rem/2 'Trade Gothic LT',
-    sans-serif;
+  font: normal 0.65rem/2 $font-sans;
   color: #8c8c8c;
   margin: 0 0 0.5rem;
 }
 
 .short-description {
-  font:
-    1.2rem/1.5 'Minion Pro',
-    serif;
+  font: normal 1.2rem/1.5 $font-serif;
   color: #8c8c8c;
   margin: 0 0 2rem;
   padding-right: 30%;
 }
 
 .add-to-cart {
-  font:
-    bold 1rem/1 'Trade Gothic LT',
-    sans-serif;
+  font: bold 1rem/1 $font-sans;
   border: none;
-  background-color: var(--color-accent);
+  background-color: $color-accent;
   color: #fff;
   padding: 1rem 1.5rem;
   text-transform: uppercase;

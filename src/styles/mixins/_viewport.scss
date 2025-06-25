@@ -1,29 +1,63 @@
+@use 'variables' as *;
+
 @mixin xs {
-  @media screen and (width < 768px) {
+  @media screen and (width < $breakpoint-sm) {
     @content;
   }
 }
 
 @mixin sm {
-  @media screen and (width >= 768px) {
+  @media screen and (width >= $breakpoint-sm) {
     @content;
   }
 }
 
 @mixin md {
-  @media screen and (width >= 1024px) {
+  @media screen and (width >= $breakpoint-md) {
     @content;
   }
 }
 
 @mixin lg {
-  @media screen and (width >= 1200px) {
+  @media screen and (width >= $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin de {
+  @media screen and (width >= $breakpoint-de) {
     @content;
   }
 }
 
 @mixin xl {
-  @media screen and (width >= 1400px) {
+  @media screen and (width >= $breakpoint-xl) {
     @content;
+  }
+}
+
+@mixin xxl {
+  @media screen and (width >= $breakpoint-xxl) {
+    @content;
+  }
+}
+
+@mixin xxxl {
+  @media screen and (width >= $breakpoint-xxxl) {
+    @content;
+  }
+}
+
+@mixin in-viewports($viewports-prop-values: ()) {
+  @each $viewport, $props-values in $viewports-prop-values {
+    @if map-has-key($breakpoints, $viewport) {
+     @media screen and (width >= map-get($breakpoints, $viewport)) {
+        @each $prop, $value in $props-values {
+          #{$prop}: $value;
+        }
+     }
+    } @else {
+      @warn "Unknown viewport: '#{$viewport}'";
+    }
   }
 }

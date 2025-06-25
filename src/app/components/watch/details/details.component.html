@@ -5,7 +5,7 @@
     <li *ngFor="let detail of details().data" class="detail-list-item">
       <div class="detail-list-icon">
         <img
-          src="assets/images/icons/{{ mediaMap()[detail.iconTarget] }}"
+          src="/icons/{{ mediaMap()[detail.iconTarget] }}"
           alt="Icon {{ detail.text }}"
         />
       </div>
@@ -16,6 +16,6 @@
     </li>
   </ul>
   <div class="detail-image">
-    <img src="assets/images/img/{{ mediaMap()['detail-1'] }}" alt="Product detail" />
+    <img src="/img/{{ mediaMap()['detail-1'] }}" alt="Product detail" />
   </div>
 </article>

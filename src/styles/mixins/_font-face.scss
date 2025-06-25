@@ -1,0 +1,17 @@
+@mixin font-face($family, $woff2, $woff: $woff2, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $family;
+    font-style: $style;
+    font-weight: $weight;
+    src: url('/fonts/#{$woff2}.woff2') format('woff2'),
+         url('/fonts/#{$woff}.woff') format('woff');
+  }
+}
+
+@mixin font-face-aliases($families, $weights: (normal, 400), $woff2, $woff: $woff2, $style: normal) {
+  @each $family in $families {
+    @each $weight in $weights {
+      @include font-face($family, $woff2, $woff, $weight);
+    }
+  }
+}

@@ -1,7 +1,7 @@
-@use 'mixins/viewport' as vp;
+@use 'common' as *;
 
 .section-name {
-  color: var(--color-accent);
+  color: $color-accent;
 }
 
 .detail-list {
@@ -15,7 +15,7 @@
     display: flex;
     flex: 0 0 100%;
 
-    @include vp.sm {
+    @include md {
       flex: 0 0 50%;
     }
   }
