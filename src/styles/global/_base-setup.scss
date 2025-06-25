@@ -5,6 +5,8 @@ html {
   font-family: $font-sans;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }

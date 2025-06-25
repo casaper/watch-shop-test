@@ -8,20 +8,41 @@
   margin: 0 0.5rem;
   padding: 1rem 0;
 
-  @include in-viewports((
-    md: (padding: 2rem 0, margin: 0 0.65rem),
-    lg: (padding: 2rem 0, margin: 0 0.75rem),
-    de: (padding: 2.5rem 0, margin: 0 0.875rem),
-  ));
+  @include in-viewports(
+    (
+      md: (
+        padding: 2rem 0,
+        margin: 0 0.65rem,
+      ),
+      lg: (
+        padding: 2rem 0,
+        margin: 0 0.75rem,
+      ),
+      de: (
+        padding: 2.5rem 0,
+        margin: 0 0.875rem,
+      ),
+    )
+  );
 
   &-images {
     flex: 0 0 100%;
 
-    @include in-viewports((
-      md: (flex: 0 0 50%),
-      lg: (flex: 0 0 30rem, max-width: 45%),
-      de: (flex: 0 0 40rem, max-width: 40%),
-    ));
+    @include in-viewports(
+      (
+        md: (
+          flex: 0 0 50%,
+        ),
+        lg: (
+          flex: 0 0 30rem,
+          max-width: 45%,
+        ),
+        de: (
+          flex: 0 0 40rem,
+          max-width: 40%,
+        ),
+      )
+    );
   }
 
   &-inner {
@@ -30,21 +51,37 @@
     justify-content: center;
     flex: 0 0 100%;
 
-    @include in-viewports((
-      lg: (flex: 0 0 30rem, max-width: 45%),
-      de: (flex: 0 0 40rem, max-width: 40%),
-    ));
+    @include in-viewports(
+      (
+        lg: (
+          flex: 0 0 30rem,
+          max-width: 45%,
+        ),
+        de: (
+          flex: 0 0 40rem,
+          max-width: 40%,
+        ),
+      )
+    );
   }
 
   &-box {
     flex: 0 0 calc(100% - 3rem);
     margin: 0;
 
-    @include in-viewports((
-      md: (flex: 0 0 calc(100% - 2rem)),
-      lg: (flex: 0 0 calc(100% - 1rem)),
-      de: (flex: 0 0 calc(100% - 0.5rem)),
-    ));
+    @include in-viewports(
+      (
+        md: (
+          flex: 0 0 calc(100% - 2rem),
+        ),
+        lg: (
+          flex: 0 0 calc(100% - 1rem),
+        ),
+        de: (
+          flex: 0 0 calc(100% - 0.5rem),
+        ),
+      )
+    );
   }
 
   &-shift {
@@ -58,12 +95,26 @@
   line-height: 1.2;
   font-size: 1.5rem;
 
-  @include in-viewports((
-    md: (font-size: 1.85rem, padding-right: 20%),
-    lg: (font-size: 2rem, padding-right: 30%),
-    de: (font-size: 2.15rem, padding-right: 40%),
-    xl: (font-size: 2.25rem, padding-right: 50%),
-  ));
+  @include in-viewports(
+    (
+      md: (
+        font-size: 1.85rem,
+        padding-right: 20%,
+      ),
+      lg: (
+        font-size: 2rem,
+        padding-right: 30%,
+      ),
+      de: (
+        font-size: 2.15rem,
+        padding-right: 40%,
+      ),
+      xl: (
+        font-size: 2.25rem,
+        padding-right: 50%,
+      ),
+    )
+  );
 }
 
 .price {

@@ -51,11 +51,11 @@
 @mixin in-viewports($viewports-prop-values: ()) {
   @each $viewport, $props-values in $viewports-prop-values {
     @if map-has-key($breakpoints, $viewport) {
-     @media screen and (width >= map-get($breakpoints, $viewport)) {
+      @media screen and (width >= map-get($breakpoints, $viewport)) {
         @each $prop, $value in $props-values {
           #{$prop}: $value;
         }
-     }
+      }
     } @else {
       @warn "Unknown viewport: '#{$viewport}'";
     }

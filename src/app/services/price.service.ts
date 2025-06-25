@@ -4,13 +4,12 @@ import { priceData, priceById, priceBySku } from './price-data';
 import { Observable, from } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PriceService {
-
   getPrices(active = true): Observable<Price[]> {
     if (active) {
-      return from(Promise.resolve(priceData.filter(price => price.isActive)));
+      return from(Promise.resolve(priceData.filter((price) => price.isActive)));
     }
     return from(Promise.resolve(priceData));
   }

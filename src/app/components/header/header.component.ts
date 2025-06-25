@@ -5,15 +5,10 @@ import { RouterLink, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
-  imports: [
-    CommonModule,
-    NavComponent,
-    RouterModule,
-    RouterLink,
-  ],
+  imports: [CommonModule, NavComponent, RouterModule, RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
   openLanguageSelector() {

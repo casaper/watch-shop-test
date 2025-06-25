@@ -9,10 +9,7 @@ import { LeadComponent } from './lead/lead.component';
   selector: 'app-watch',
   imports: [CommonModule, SpecificationsComponent, DetailsComponent, LeadComponent],
   templateUrl: './watch.component.html',
-  styleUrls: [
-    './watch.component.scss',
-    './watch-common.scss',
-  ],
+  styleUrls: ['./watch.component.scss', './watch-common.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WatchComponent {

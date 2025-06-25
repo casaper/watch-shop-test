@@ -5,15 +5,9 @@ import { RouterLink, RouterModule } from '@angular/router';
 @Component({
   selector: 'app-nav',
   standalone: true,
-  imports: [
-    CommonModule,
-    RouterModule,
-    RouterLink,
-  ],
+  imports: [CommonModule, RouterModule, RouterLink],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NavComponent {
-
-}
+export class NavComponent {}

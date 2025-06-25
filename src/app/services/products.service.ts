@@ -5,15 +5,17 @@ import { PriceService } from './price.service';
 import { Observable, from, firstValueFrom } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProductsService {
   priceService = inject(PriceService);
 
   getProducts(active = true, includePrice = false): Observable<ProductWithPrice[]> {
-    const products = (active ? productsData.filter(product => product.isActive) : productsData).map(p => this.sortProductMediaAndData(p));
+    const products = (
+      active ? productsData.filter((product) => product.isActive) : productsData
+    ).map((p) => this.sortProductMediaAndData(p));
     if (includePrice) {
-      return from(Promise.all(products.map(product => this.addProductPrice(product))));
+      return from(Promise.all(products.map((product) => this.addProductPrice(product))));
     }
     return from(Promise.resolve(products));
   }
@@ -44,7 +46,7 @@ export class ProductsService {
     const price = await firstValueFrom(this.priceService.getPriceBySku(product.sku));
     return {
       ...product,
-      price
+      price,
     };
   }
 

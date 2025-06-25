@@ -8,9 +8,8 @@ describe('WishListPage', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [WishListPage]
-    })
-    .compileComponents();
+      imports: [WishListPage],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(WishListPage);
     component = fixture.componentInstance;

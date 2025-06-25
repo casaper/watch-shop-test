@@ -6,10 +6,7 @@ import { ProductWithPrice } from '../../../models/product.type';
   selector: 'app-details',
   imports: [CommonModule],
   templateUrl: './details.component.html',
-  styleUrls: [
-    './details.component.scss',
-    '../watch-common.scss',
-  ],
+  styleUrls: ['./details.component.scss', '../watch-common.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DetailsComponent {

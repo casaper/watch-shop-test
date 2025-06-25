@@ -6,7 +6,7 @@
  * See https://quicktype.io for more information on how to use quicktype.
  */
 
-import { Price } from "./price.type";
+import { Price } from './price.type';
 
 // To parse this data:
 //
@@ -70,9 +70,7 @@ function invalidValue(typ: any, val: any, key: any, parent: any = ''): never {
   const parentText = parent ? ` on ${parent}` : '';
   const keyText = key ? ` for key "${key}"` : '';
   throw Error(
-    `Invalid value${keyText}${parentText}. Expected ${prettyTyp} but got ${JSON.stringify(
-      val
-    )}`
+    `Invalid value${keyText}${parentText}. Expected ${prettyTyp} but got ${JSON.stringify(val)}`
   );
 }
 
@@ -112,13 +110,7 @@ function jsToJSONProps(typ: any): any {
   return typ.jsToJSON;
 }
 
-function transform(
-  val: any,
-  typ: any,
-  getProps: any,
-  key: any = '',
-  parent: any = ''
-): any {
+function transform(val: any, typ: any, getProps: any, key: any = '', parent: any = ''): any {
   function transformPrimitive(typ: string, val: any): any {
     if (typeof typ === typeof val) return val;
     return invalidValue(typ, val, key, parent);
@@ -165,20 +157,14 @@ function transform(
     return d;
   }
 
-  function transformObject(
-    props: Record<string, any>,
-    additional: any,
-    val: any
-  ): any {
+  function transformObject(props: Record<string, any>, additional: any, val: any): any {
     if (val === null || typeof val !== 'object' || Array.isArray(val)) {
       return invalidValue(l(ref || 'object'), val, key, parent);
     }
     const result: any = {};
     Object.getOwnPropertyNames(props).forEach((key) => {
       const prop = props[key];
-      const v = Object.prototype.hasOwnProperty.call(val, key)
-        ? val[key]
-        : undefined;
+      const v = Object.prototype.hasOwnProperty.call(val, key) ? val[key] : undefined;
       result[prop.key] = transform(v, prop.typ, getProps, key, ref);
     });
     Object.getOwnPropertyNames(val).forEach((key) => {
@@ -205,10 +191,10 @@ function transform(
     return typ.hasOwnProperty('unionMembers')
       ? transformUnion(typ.unionMembers, val)
       : typ.hasOwnProperty('arrayItems')
-      ? transformArray(typ.arrayItems, val)
-      : typ.hasOwnProperty('props')
-      ? transformObject(getProps(typ), typ.additional, val)
-      : invalidValue(typ, val, key, parent);
+        ? transformArray(typ.arrayItems, val)
+        : typ.hasOwnProperty('props')
+          ? transformObject(getProps(typ), typ.additional, val)
+          : invalidValue(typ, val, key, parent);
   }
   // Numbers can be parsed by Date but shouldn't be.
   if (typ === Date && typeof val !== 'number') return transformDate(val);

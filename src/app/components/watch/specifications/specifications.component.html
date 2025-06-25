@@ -6,10 +6,7 @@
   <ul class="detail-list">
     <li *ngFor="let detail of specifications().data" class="detail-list-item">
       <div class="detail-list-icon">
-        <img
-          src="/icons/{{ mediaMap()[detail.iconTarget] }}"
-          alt="Icon {{ detail.text }}"
-        />
+        <img src="/icons/{{ mediaMap()[detail.iconTarget] }}" alt="Icon {{ detail.text }}" />
       </div>
       <div class="detail-list-name">{{ detail.title }}</div>
       <div class="detail-list-value">{{ detail.text }}</div>

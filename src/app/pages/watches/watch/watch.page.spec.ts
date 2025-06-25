@@ -8,9 +8,8 @@ describe('ShowProductComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [WatchPage]
-    })
-    .compileComponents();
+      imports: [WatchPage],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(WatchPage);
     component = fixture.componentInstance;

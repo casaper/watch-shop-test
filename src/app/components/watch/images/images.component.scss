@@ -8,12 +8,22 @@
   max-width: 100%;
   overflow: hidden;
 
-  @include in-viewports((
-    md: (height: 30rem),
-    lg: (height: 32.5rem),
-    de: (height: 35rem),
-    xl: (height: 40rem),
-  ));
+  @include in-viewports(
+    (
+      md: (
+        height: 30rem,
+      ),
+      lg: (
+        height: 32.5rem,
+      ),
+      de: (
+        height: 35rem,
+      ),
+      xl: (
+        height: 40rem,
+      ),
+    )
+  );
 }
 
 .selector {

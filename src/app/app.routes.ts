@@ -4,7 +4,7 @@ export const routes: Routes = [
   {
     path: '',
     redirectTo: 'watches/watch/GOA535',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: 'watches',
@@ -12,28 +12,28 @@ export const routes: Routes = [
       {
         path: '',
         redirectTo: 'watch/GOA535',
-        pathMatch: 'full'
+        pathMatch: 'full',
       },
       {
         path: 'watch/:sku',
-        loadComponent: () => import('./pages/watches/watch/watch.page').then(m => m.WatchPage),
+        loadComponent: () => import('./pages/watches/watch/watch.page').then((m) => m.WatchPage),
       },
       /**
        * Would be default `''`, if not demo redirect to GOA535
        */
       {
         path: 'list',
-        loadComponent: () => import('./pages/watches/watches.page').then(m => m.WatchesPage),
+        loadComponent: () => import('./pages/watches/watches.page').then((m) => m.WatchesPage),
       },
-    ]
+    ],
   },
   {
     path: 'academy',
     children: [
       {
         path: '',
-        loadComponent: () => import('./pages/academy/academy.page').then(m => m.AcademyPage),
-      }
+        loadComponent: () => import('./pages/academy/academy.page').then((m) => m.AcademyPage),
+      },
     ],
   },
   {
@@ -41,8 +41,8 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        loadComponent: () => import('./pages/company/company.page').then(m => m.CompanyPage),
-      }
+        loadComponent: () => import('./pages/company/company.page').then((m) => m.CompanyPage),
+      },
     ],
   },
   {
@@ -50,8 +50,9 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        loadComponent: () => import('./pages/jewellery/jewellery.page').then(m => m.JewelleryPage),
-      }
+        loadComponent: () =>
+          import('./pages/jewellery/jewellery.page').then((m) => m.JewelleryPage),
+      },
     ],
   },
   {
@@ -59,8 +60,8 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        loadComponent: () => import('./pages/stores/stores.page').then(m => m.StoresPage),
-      }
+        loadComponent: () => import('./pages/stores/stores.page').then((m) => m.StoresPage),
+      },
     ],
   },
   {
@@ -68,8 +69,8 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        loadComponent: () => import('./pages/wedding/wedding.page').then(m => m.WeddingPage),
-      }
+        loadComponent: () => import('./pages/wedding/wedding.page').then((m) => m.WeddingPage),
+      },
     ],
   },
   {
@@ -77,8 +78,8 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        loadComponent: () => import('./pages/basket/basket.page').then(m => m.BasketPage),
-      }
+        loadComponent: () => import('./pages/basket/basket.page').then((m) => m.BasketPage),
+      },
     ],
   },
   {
@@ -86,8 +87,8 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        loadComponent: () => import('./pages/contact/contact.page').then(m => m.ContactPage),
-      }
+        loadComponent: () => import('./pages/contact/contact.page').then((m) => m.ContactPage),
+      },
     ],
   },
   {
@@ -95,8 +96,8 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        loadComponent: () => import('./pages/profile/profile.page').then(m => m.ProfilePage),
-      }
+        loadComponent: () => import('./pages/profile/profile.page').then((m) => m.ProfilePage),
+      },
     ],
   },
   {
@@ -104,8 +105,8 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        loadComponent: () => import('./pages/wish-list/wish-list.page').then(m => m.WishListPage),
-      }
+        loadComponent: () => import('./pages/wish-list/wish-list.page').then((m) => m.WishListPage),
+      },
     ],
   },
 ];

@@ -7,11 +7,8 @@ import { ImagesComponent } from '../images/images.component';
   selector: 'app-lead',
   imports: [CommonModule, ImagesComponent],
   templateUrl: './lead.component.html',
-  styleUrls: [
-    './lead.component.scss',
-    '../watch-common.scss',
-  ],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrls: ['./lead.component.scss', '../watch-common.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LeadComponent {
   product = input.required<ProductWithPrice>();

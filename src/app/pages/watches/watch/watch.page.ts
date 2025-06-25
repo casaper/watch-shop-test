@@ -9,20 +9,17 @@ import { WatchComponent } from '../../../components/watch/watch.component';
 
 @Component({
   selector: 'app-watch-page',
-  imports: [
-    CommonModule,
-    WatchComponent,
-  ],
+  imports: [CommonModule, WatchComponent],
   templateUrl: './watch.page.html',
   styleUrl: './watch.page.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WatchPage {
   private productsService = inject(ProductsService);
   private route = inject(ActivatedRoute);
   product$ = this.route.paramMap.pipe(
-    map(params => params.get('sku')!),
-    mergeMap(sku => this.productsService.getProductBySku(sku, true))
+    map((params) => params.get('sku')!),
+    mergeMap((sku) => this.productsService.getProductBySku(sku, true))
   );
   product = toSignal(this.product$);
 }

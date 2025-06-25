@@ -1,8 +1,18 @@
 @use 'common' as *;
 
-$trade-gothic-aliases: ('Trade Gothic LT', 'Trade-Gothic-LT', 'Trade-Gothic', 'trade-gothic', 'tradegothic');
+$trade-gothic-aliases: (
+  'Trade Gothic LT',
+  'Trade-Gothic-LT',
+  'Trade-Gothic',
+  'trade-gothic',
+  'tradegothic'
+);
 
 @include font-face-aliases($trade-gothic-aliases, (normal, 400, regular), 'Trade-Gothic-LT');
 @include font-face-aliases($trade-gothic-aliases, (light, 300), 'Trade-Gothic-LT-Light');
 @include font-face-aliases($trade-gothic-aliases, (bold, 700), 'Trade-Gothic-LT-Bold');
-@include font-face-aliases(('Minion Pro', 'Minion-Pro', 'minion-pro', 'minionpro'), (normal, 400, regular), 'Minion-Pro-Regular');
+@include font-face-aliases(
+  ('Minion Pro', 'Minion-Pro', 'minion-pro', 'minionpro'),
+  (normal, 400, regular),
+  'Minion-Pro-Regular'
+);
