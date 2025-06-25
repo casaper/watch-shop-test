@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { RouterLink, RouterModule } from '@angular/router';
 
 @Component({
@@ -10,4 +10,13 @@ import { RouterLink, RouterModule } from '@angular/router';
   styleUrl: './nav.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NavComponent {}
+export class NavComponent {
+  /**
+   * Only affects viewports smaller than sm
+   */
+  closed = signal<boolean>(true);
+
+  toggleMenu(override?: boolean) {
+    this.closed.update((closed) => (typeof override === 'boolean' ? override : !closed));
+  }
+}

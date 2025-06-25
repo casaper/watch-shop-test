@@ -7,34 +7,45 @@
   flex-direction: column-reverse;
   align-items: center;
   margin: 0 auto;
-  max-width: calc(100vw - 1rem);
   overflow-x: hidden;
+  max-width: calc(100vw - 1rem);
+  min-height: 5rem;
 
-  @include md {
-    max-width: calc(48rem - 1rem);
-  }
-
-  @include lg {
-    max-width: calc(64rem - 1.5rem);
-  }
-
-  @include xl {
-    max-width: calc(75rem - 1.5rem);
-  }
+  @include in-viewports(
+    (
+      md: (
+        max-width: calc(48rem - 1rem),
+      ),
+      lg: (
+        max-width: calc(64rem - 1.5rem),
+      ),
+      xl: (
+        max-width: calc(75rem - 1.5rem),
+      ),
+    )
+  );
 }
 
 .main-menu {
   order: 0;
   width: 100%;
   position: relative;
+  z-index: 101;
 }
 
 .top-menu {
+  position: relative;
+  z-index: 101;
   order: 2;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+
+  @include lt-md {
+    position: absolute;
+    top: 0;
+  }
 
   &-item {
     flex: 0 0 3rem;
@@ -79,24 +90,34 @@ button {
 }
 
 .brand {
+  position: relative;
+  z-index: 105;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   order: 1;
-  position: absolute;
-  height: 5rem;
+  height: 3rem;
 
-  @include md {
-    max-width: 8rem;
-  }
-
-  @include lg {
-    max-width: 13rem;
-  }
-
-  @include xl {
-    max-width: 18rem;
-  }
+  @include in-viewports(
+    (
+      xs: (
+        bottom: 0,
+      ),
+      md: (
+        max-width: 10rem,
+        height: 5rem,
+        position: absolute,
+        justify-content: center,
+      ),
+      lg: (
+        max-width: 13rem,
+        height: 5rem,
+      ),
+      xl: (
+        max-width: 18rem,
+      ),
+    )
+  );
 
   img {
     max-width: 75%;
