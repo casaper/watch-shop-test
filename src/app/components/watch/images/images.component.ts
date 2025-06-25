@@ -6,7 +6,10 @@ import { ProductWithPrice } from '../../../models/product.type';
   selector: 'app-images',
   imports: [CommonModule],
   templateUrl: './images.component.html',
-  styleUrl: './images.component.scss',
+  styleUrls: [
+    './images.component.scss',
+    '../watch-common.scss',
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ImagesComponent implements OnInit {

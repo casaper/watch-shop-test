@@ -6,7 +6,10 @@ import { ProductWithPrice } from '../../../models/product.type';
   selector: 'app-specifications',
   imports: [CommonModule],
   templateUrl: './specifications.component.html',
-  styleUrl: './specifications.component.scss',
+  styleUrls: [
+    './specifications.component.scss',
+    '../watch-common.scss',
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SpecificationsComponent {

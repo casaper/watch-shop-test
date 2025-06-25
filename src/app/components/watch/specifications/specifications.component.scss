@@ -4,19 +4,27 @@
   color: $color-accent;
 }
 
-.detail-list {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-
-  &-item {
+.detail {
+  &-list {
     display: flex;
-    flex: 0 0 100%;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
-    @include md {
-      flex: 0 0 50%;
+    &-item {
+      display: flex;
+      flex: 0 0 100%;
+
+      @include md {
+        flex: 0 0 50%;
+      }
+    }
+  }
+
+  &-image {
+    img {
+      max-width: 100%;
     }
   }
 }

@@ -1,6 +1,8 @@
 <article class="specifications">
-  <div class="section-name">Specifications</div>
-  <h3>{{ specifications().title }}</h3>
+  <div class="semantic-title">
+    <h2>{{ specifications().title }}</h2>
+    <div class="section-name">Specifications</div>
+  </div>
   <ul class="detail-list">
     <li *ngFor="let detail of specifications().data" class="detail-list-item">
       <div class="detail-list-icon">

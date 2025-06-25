@@ -1,0 +1,21 @@
+<section class="lead">
+  <app-images class="lead-images" [galleryMedia]="galleryMedia()"></app-images>
+  <div class="lead-inner">
+    <div class="lead-box">
+      <div class="semantic-title">
+        <h1 class="title">{{ product().title }}</h1>
+        <div class="section-name">{{ product().category }} Watches</div>
+      </div>
+      <div class="lead-shift">
+        <div class="price">
+          {{ product().price?.priceFormatted }}
+        </div>
+        <div class="type-sku">Watch {{ product().sku }}</div>
+        <div class="short-description">
+          {{ product().shortDescription }}
+        </div>
+        <button class="add-to-cart">Add to shopping bag</button>
+      </div>
+    </div>
+  </div>
+</section>

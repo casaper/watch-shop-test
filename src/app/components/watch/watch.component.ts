@@ -3,13 +3,16 @@ import { ProductWithPrice } from '../../models/product.type';
 import { CommonModule } from '@angular/common';
 import { DetailsComponent } from './details/details.component';
 import { SpecificationsComponent } from './specifications/specifications.component';
-import { ImagesComponent } from './images/images.component';
+import { LeadComponent } from './lead/lead.component';
 
 @Component({
   selector: 'app-watch',
-  imports: [CommonModule, SpecificationsComponent, DetailsComponent, ImagesComponent],
+  imports: [CommonModule, SpecificationsComponent, DetailsComponent, LeadComponent],
   templateUrl: './watch.component.html',
-  styleUrl: './watch.component.scss',
+  styleUrls: [
+    './watch.component.scss',
+    './watch-common.scss',
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WatchComponent {

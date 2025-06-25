@@ -1,0 +1,25 @@
+@use 'common' as *;
+
+.semantic-title {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.section-name {
+  color: $color-accent;
+  line-height: 1.1;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  font-size: 0.85rem;
+
+  @include in-viewports((
+    md: (font-size: 0.8rem),
+    lg: (font-size: 0.85rem),
+    de: (font-size: 0.9rem),
+    xl: (font-size: 1rem),
+    xxl: (font-size: 1.15rem),
+    xxxl: (font-size: 1.25rem)
+  ));
+}
