@@ -3,8 +3,10 @@
     <app-images class="lead-images" [galleryMedia]="galleryMedia()"></app-images>
     <div class="lead-inner">
       <div class="lead-box">
-        <div class="category">{{ product().category }} Watches</div>
-        <h2 class="title">{{ product().title }}</h2>
+        <div class="semantic-title">
+          <h2 class="title">{{ product().title }}</h2>
+          <div class="category">{{ product().category }} Watches</div>
+        </div>
         <div class="lead-shift">
           <div class="price">
             {{ product().price?.priceFormatted }}
