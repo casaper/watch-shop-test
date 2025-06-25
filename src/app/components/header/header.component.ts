@@ -16,5 +16,11 @@ import { RouterLink, RouterModule } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent {
+  openLanguageSelector() {
+    // Dummy function to open language selector
+  }
 
+  openSearch() {
+    // Dummy function to open search
+  }
 }
